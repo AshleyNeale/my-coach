@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+	<widget xmlns   = "http://www.w3.org/ns/widgets"
+		xmlns:gap   = "http://phonegap.com/ns/1.0"
+		xmlns:android   = "http://schemas.android.com/apk/res/android"
+		id          = "com.phonegap.my-coach"
+		version     = "1.0.0" >
+		
+		
+	<name>My Coach</name>
+
+	<description>
+		Sports coaching application.
+	</description>
+	
+
+<!-------- Android Manifest settings -------->
+
+	<!-- Ensures app resumes from last activity (not restarting) -->
+	<gap:config-file platform="android" parent="/manifest">
+		<activity
+		android:launchMode="singleInstance" />
+	</gap:config-file>
+	
+	<gap:config-file platform="android" parent="/manifest">
+		<uses-permission 
+		android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	</gap:config-file>
+
+
+<!-------- Preferences -------->
+
+	<!-- Build for Android Phone only -->
+	<gap:platform name="android" />
+
+	<!-- Use PhoneGap Version 3.3 -->
+	<preference name="phonegap-version" value="3.3.0" />
+	
+	<!-- Default orientation, enables both portrait and landscape -->
+	<preference name="orientation" value="default" />
+	
+	<!-- Fullscreen enabled, hides status bar when app in use -->
+	<preference name="fullscreen" value="true" />
+	
+	<!-- Sets install location to auto -->
+	<preference name="android-installLocation" value="auto" />
+	
+	<!-- Show splash screen -->
+	<preference name="splashscreen" value="splash" />
+	
+	<!-- Sets splash screen duration -->
+	<preference name="splashScreenDelay" value="10000" />
+	
+	<!-- Keeps app running when home button is pressed (iOS only)-->
+	<preference name="exit-on-suspend" value="false" />
+	
+	<!-- Minimum SDK version supported set to Ice Cream Sandwich (4.0) -->
+	<preference name="android-minSdkVersion" value="14" />
+	
+
+<!------- Features -------->
+	<feature name="Camera">
+		<param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+	</feature>
+	
+
+<!-------- Plugins -------->
+
+	<gap:plugin name="org.apache.cordova.core.camera" />
+	<gap:plugin name="org.apache.cordova.splashscreen" version="0.2.7" />
+	
+
+<!-------- Icons -------->
+	
+	<icon src="icon.png" />
+	
+	<!-- Android -->
+	<icon src="res/icons/android/icon-36-ldpi.png"  gap:platform="android"  gap:qualifier="ldpi" />
+	<icon src="res/icons/android/icon-48-mdpi.png"  gap:platform="android"  gap:qualifier="mdpi" />
+	<icon src="res/icons/android/icon-72-hdpi.png"  gap:platform="android"  gap:qualifier="hdpi" />
+	<icon src="res/icons/android/icon-96-xhdpi.png"  gap:platform="android"  gap:qualifier="xhdpi" />
+	
+
+<!-------- Splash Screen -------->
+
+	<!-- Android -->
+	<gap:splash src="res/screens/android/screen-ldpi-portrait.png"  gap:platform="android" gap:qualifier="port-ldpi" />
+	<gap:splash src="res/screens/android/screen-ldpi-landscape.png"  gap:platform="android" gap:qualifier="land-ldpi" />
+	<gap:splash src="res/screens/android/screen-mdpi-portrait.png"  gap:platform="android" gap:qualifier="port-mdpi" />
+	<gap:splash src="res/screens/android/screen-mdpi-landscape.png"  gap:platform="android" gap:qualifier="land-mdpi" />
+	<gap:splash src="res/screens/android/screen-hdpi-portrait.png"  gap:platform="android" gap:qualifier="port-hdpi" />
+	<gap:splash src="res/screens/android/screen-hdpi-landscape.png"  gap:platform="android" gap:qualifier="land-hdpi" />
+	<gap:splash src="res/screens/android/screen-xhdpi-portrait.png"  gap:platform="android" gap:qualifier="port-xhdpi" />
+	<gap:splash src="res/screens/android/screen-xhdpi-landscape.png"  gap:platform="android" gap:qualifier="land-xhdpi" />
+	
+
+<!-------- Access Elements -------->
+
+	<!-- Allow access to any external resources -->
+	<access origin="*" />
+	
+
+</widget>

@@ -1,0 +1,907 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"/>
+    
+	<title>My Coach</title>
+    
+	<!-- Access to PhoneGap -->
+	<script src="phonegap.js"></script>
+    
+	<!-- jQuery -->
+	<script src="jquery-mobile/jquery-1.9.1.min.js" type="text/javascript"></script>
+    
+	<!-- Device Ready events -->
+	<script type="text/javascript" charset="utf-8">
+		document.addEventListener("deviceready", onDeviceReady, false);
+
+		function onDeviceReady() {
+			navigator.splashscreen.hide();
+			alert("Welcome to My Coach!");
+		}
+	</script>
+    
+	<!-- Use of Camera -->
+	<script type="text/javascript" charset="utf-8">
+		function takePicture() {
+			navigator.camera.getPicture( function( imageURI ) {
+			alert( imageURI );
+		},
+		function( message ) {
+			alert( message );
+		},
+		{
+			quality: 100,
+			destinationType: Camera.DestinationType.FILE_URI,
+			sourceType: Camera.PictureSourceType.CAMERA,
+			saveToPhotoAlbum: true,
+			correctOrientation: true,
+			targetWidth: 400,
+  			targetHeight: 400
+		});
+		}
+	</script>
+    
+	<!-- jQuery Mobile -->
+	<script src="jquery-mobile/jquery.mobile-1.3.2.min.js" type="text/javascript"></script>
+	<link href="jquery-mobile/jquery.mobile-1.3.2.min.css" rel="stylesheet" type="text/css">
+    
+	<!-- My Stylesheet -->
+	<link href="css/styles.css" rel="stylesheet" type="text/css">
+    
+</head>
+
+<body>
+<div id="home" data-role="page">
+	<div class="header">
+		<div class="logo"></div>
+		<div class="orangeBreak"></div>
+	</div> <!-- end of header -->
+	<div data-role="content">
+		<h4 align="center"><strong>SELECT A SPORT</strong></h4>
+		<ul data-role="listview" class="mainmenu">
+			<li><a href="#football" data-transition="slide">
+				<h3 align="center">Football</h3>
+				<p align="center">Training Drills & Games</p>
+			</a></li>
+			<li><a href="#basketball" data-transition="slide">
+				<h3 align="center">Basketball</h3>
+				<p align="center">Games & Drills</p>
+			</a></li>
+	      	<li><a href="#af" data-transition="slide">
+    	    	<h3 align="center">American Football</h3>
+        		<p align="center">Training Drills</p>
+	      	</a></li>
+    	  	<li><a href="#rugby" data-transition="slide">
+        		<h3 align="center">Rugby</h3>
+        		<p align="center">Training Drills & Fitness</p>
+	      	</a></li>
+		</ul>
+	</div>  <!-- end of content -->
+	<div data-role="footer" data-position="fixed" class="footer">
+	</div>
+</div>  <!-- end of home page -->
+
+
+<!-- Start of football page -->
+<div data-role="page" id="football">
+	<div class="header">
+		<div class="logo"></div>
+        <div class="orangeBreak"></div>
+	</div> <!-- end of header -->
+	<div data-role="content" class="transparent">
+    	<h5>Football</h5>
+    	<div class="inside">
+    		<p>Your place for all your footballing training routines, activities, games and more!</p><p><br>Simply click the generate button below to explore our catalogue. Not happy with the random selection? Click the re-generator to find another.</p><p><br>Take a picture of your team performing a drill by using the camera icon located in the footer of each page.</p><br>
+    		<a href="#" data-role="button" onClick="randomFoot(); return false;" class="ui-shadow" data-transition="slide">Generate</a>
+		</div>
+    </div> <!-- end of content -->
+	<div data-role="footer" data-position="fixed" class="footer">
+		<a href="#home" data-role="none" data-transition="slide"><img src="img/geekchamp-icons/backButton.png" width="58" height="58"></a>
+	</div>
+</div>  <!-- end of football page -->
+
+
+<!-- Start of basketball page -->
+<div data-role="page" id="basketball">
+	<div class="header">
+		<div class="logo"></div>
+        <div class="orangeBreak"></div>
+	</div> <!-- end of header -->
+	<div data-role="content" class="transparent">
+    	<h5>Basketball</h5>
+    	<div class="inside">
+    		<p>Stuck for coaching ideas? You're in the right place. A catalogue of basketball games, drills and activities is right at your fingertips!</p><p><br>Simply click the generate button below to explore our catalogue. Not happy with the random selection? Click the re-generator to find another.</p><p><br>Take a picture of your team performing a drill by using the camera icon located in the footer of each page.</p><br>
+    		<a href="#" data-role="button" onClick="randomBask(); return false;" class="ui-shadow" data-transition="slide">Generate</a>
+		</div>
+    </div> <!-- end of content -->
+	<div data-role="footer" data-position="fixed" class="footer">
+		<a href="#home" data-role="none" data-transition="slide"><img src="img/geekchamp-icons/backButton.png" width="58" height="58"></a>
+	</div>
+</div>  <!-- end of basketball page -->
+
+
+<!-- Start of af page -->
+<div data-role="page" id="af">
+	<div class="header">
+		<div class="logo"></div>
+        <div class="orangeBreak"></div>
+	</div> <!-- end of header -->
+	<div data-role="content" class="transparent">
+    	<h5>American Football</h5>
+    	<div class="inside">
+    		<p>Bad day at practice? Never fear! We've got all the training drills you need right here.</p><p><br>Simply click the generate button below to explore our catalogue. Not happy with the random selection? Click the re-generator to find another.</p><p><br>Take a picture of your team performing a drill by using the camera icon located in the footer of each page.</p><br>
+    		<a href="#" data-role="button" onClick="randomAf(); return false;" class="ui-shadow" data-transition="slide">Generate</a>
+		</div>
+    </div> <!-- end of content -->
+	<div data-role="footer" data-position="fixed" class="footer">
+		<a href="#home" data-role="none" data-transition="slide"><img src="img/geekchamp-icons/backButton.png" width="58" height="58"></a>
+	</div>
+</div>  <!-- end of af page -->
+
+
+<!-- Start of rugby page -->
+<div data-role="page" id="rugby">
+	<div class="header">
+		<div class="logo"></div>
+        <div class="orangeBreak"></div>
+	</div> <!-- end of header -->
+	<div data-role="content" class="transparent">
+    	<h5>Rugby</h5>
+   		<div class="inside">
+    		<p>Tired of the same old routines? We hear you! Try out our rugby drills and exercises, you won't be sorry!</p><p><br>Simply click the generate button below to explore our catalogue. Not happy with the random selection? Click the re-generator to find another.</p><p><br>Take a picture of your team performing a drill by using the camera icon located in the footer of each page.</p><br>
+    		<a href="#" data-role="button" onClick="randomRugby(); return false;" class="ui-shadow" data-transition="slide">Generate</a>
+		</div>
+    </div> <!-- end of content -->
+	<div data-role="footer" data-position="fixed" class="footer">
+        <a href="#home" data-role="none" data-transition="slide"><img src="img/geekchamp-icons/backButton.png" width="58" height="58"></a>
+	</div>
+</div>  <!-- end of rugby page -->
+
+
+
+<!----------- Start of football activity pages ----------->
+
+<!-- Start of foot1 page -->
+<div data-role="page" id="foot1">
+	<div class="header">
+		<div class="logo"></div>
+        <div class="orangeBreak"></div>
+	</div> <!-- end of header -->
+	<div data-role="content" class="transparent">
+    <h2>Headers & Volleys</h2>
+    	<p>Players Required &nbsp;-&nbsp; 3+<br>1 Goalkeeper, others outfield.<br><br></p>
+        <p><strong>Objectives:</strong></p>
+        <ul>
+        	<li>Outfield players attempt to score goals with either a header or a volley</li>
+            <li>Objective number of team goals should be set beforehand (3 recommended)</li>
+            <li>If this number is reached, the current goalkeeper must do a forfeit (such as running a lap of the field/hall) and return to the goal</li>
+            <li>If the keeper catches the ball or a shot goes over or wide, the last outfield player to touch it must go in goal and the count restarts</li><br>
+      	</ul>
+       	<p><strong>Rules:</strong></p>
+        <ul>
+        	<li>No shots within six yards of the goal</li>
+            <li>Only full volleys count as a goal</li>
+            <li>Players are not allowed to set themselves up for a shot</li>
+            <li>Outfield players are not permitted to use their hands</li>
+       	</ul>
+        <br>
+    	<a href="#" data-role="button" onClick="randomFoot(); return false;" class="ui-shadow" data-transition="slide">Re-generate</a>
+    </div> <!-- end of content -->
+	<div data-role="footer" data-position="fixed" class="footer">
+		<a onclick="takePicture();" data-role="none"><img src="img/geekchamp-icons/cameraButton.png" width="58" height="58"></a>
+        <a href="#home" data-role="none" data-transition="slide"><img src="img/geekchamp-icons/homeButton.png" width="58" height="58"></a>
+        <a href="#" data-role="none" onclick="goBack()" data-transition="slide"><img src="img/geekchamp-icons/backButton.png" width="58" height="58"></a>
+	</div>
+</div> <!-- end of foot1 page -->
+
+
+<!-- Start of foot2 page -->
+<div data-role="page" id="foot2">
+	<div class="header">
+		<div class="logo"></div>
+        <div class="orangeBreak"></div>
+	</div> <!-- end of header -->
+	<div data-role="content" class="transparent">
+    <h2>Passing Through the Lines</h2>
+    	<div class="example"><img src="img/foot2IMG.png"></div>
+		<p>Players Required &nbsp;-&nbsp; 6-9 recommended<br>3 groups evenly split.<br><br></p>
+        <p><strong>Set-Up and Objectives:</strong></p>
+        <ul>
+        	<li>Two sets of cones should be set up approx. 15 metres apart, as shown</li>
+            <li>Players should be split into three groups, one group being placed in the middle of the cones and the others at either end</li>
+            <li>The players at either end of the cones should work together, passing the ball past those in the middle</li>
+            <li>The players in the middle should attempt to intercept the passes as they travel across the middle area</li>
+            <li>If a player intercepts a pass, they replace the last player to touch the ball</li><br>
+      	</ul>
+       	<p><strong>Rules:</strong></p>
+        <ul>
+        	<li>All passes must be along the floor</li>
+            <li>Passing players must not enter the middle area</li>
+            <li>Intercepting players must not enter the end zones</li>
+            <li>Cones should be distanced further apart after every 10 completed passes without an interception</li>
+       	</ul>
+        <br>
+    	<a href="#" data-role="button" onClick="randomFoot(); return false;" class="ui-shadow" data-transition="slide">Re-generate</a>
+    </div> <!-- end of content -->
+	<div data-role="footer" data-position="fixed" class="footer">
+		<a onclick="takePicture();" data-role="none"><img src="img/geekchamp-icons/cameraButton.png" width="58" height="58"></a>
+		<a href="#home" data-role="none" data-transition="slide"><img src="img/geekchamp-icons/homeButton.png" width="58" height="58"></a>
+        <a href="#" data-role="none" onclick="goBack()" data-transition="slide"><img src="img/geekchamp-icons/backButton.png" width="58" height="58"></a>
+	</div>
+</div> <!-- end of foot2 page -->
+
+
+<!-- Start of foot3 page -->
+<div data-role="page" id="foot3">
+	<div class="header">
+		<div class="logo"></div>
+        <div class="orangeBreak"></div>
+	</div> <!-- end of header -->
+	<div data-role="content" class="transparent">
+    <h2>Lay-off and Shot</h2>
+    	<div class="example"><img src="img/foot3IMG.png"></div>
+		<p>Players Required &nbsp;-&nbsp; 3+ (more than 5 recommended)<br>1 Goalkeeper, 1 lay-off man, others shooting.<br><br></p>
+        <p><strong>Set-Up and Objectives:</strong></p>
+        <ul>
+        	<li>Lay-off man should be positioned centre of goal approx. 18 yards out</li>
+            <li>Shooting players should form a queue approx. 6 yards from the lay-off man, as shown</li>
+            <li>Shooting players should take it in turns to pass the ball to the lay-off man</li>
+            <li>The lay-off man will lay the ball off either left or right</li>
+            <li>The shooting player will run onto the ball, striking it towards goal with either their left of right foot</li>
+            <li>Shooting players should retrieve their ball and return to the back of the queue for another turn</li><br>
+      	</ul>
+       	<p><strong>Rules:</strong></p>
+        <ul>
+        	<li>Shooting players may call which side they would like the lay-off pass</li>
+            <li>Ball can be thrown instead of passed as a variation to incorporate the volleying technique</li>
+            <li>Lay-off man can be positioned closer or further from goal dependent on age group/ability</li>
+       	</ul>
+        <br>
+    	<a href="#" data-role="button" onClick="randomFoot(); return false;" class="ui-shadow" data-transition="slide">Re-generate</a>
+    </div> <!-- end of content -->
+	<div data-role="footer" data-position="fixed" class="footer">
+    	<a onclick="takePicture();" data-role="none"><img src="img/geekchamp-icons/cameraButton.png" width="58" height="58"></a>
+		<a href="#home" data-role="none" data-transition="slide"><img src="img/geekchamp-icons/homeButton.png" width="58" height="58"></a>
+        <a href="#" data-role="none" onclick="goBack()" data-transition="slide"><img src="img/geekchamp-icons/backButton.png" width="58" height="58"></a>
+	</div>
+</div> <!-- end of foot3 page -->
+
+
+<!-- Start of foot4 page -->
+<div data-role="page" id="foot4">
+	<div class="header">
+		<div class="logo"></div>
+        <div class="orangeBreak"></div>
+	</div> <!-- end of header -->
+	<div data-role="content" class="transparent">
+    <h2>Keep Ball</h2>
+    	<div class="example"><img src="img/foot4IMG.png"></div>
+		<p>Players Required &nbsp;-&nbsp; 5+ (the more the better)<br>1 interceptor (dependent on number of players), others passing.<br><br></p>
+        <p><strong>Set-Up and Objectives:</strong></p>
+        <ul>
+        	<li>Passing players should form a circle, as shown (the smaller the circle the higher degree of difficulty for passing players)</li>
+            <li>Intercepting player(s) should position themselves within the circle</li>
+            <li>Passing players should attempt to keep possession of the ball by passing between one another</li>
+            <li>Intercepting player(s) should attempt to gain possession of the ball either by intercepting passes or tackling</li>
+            <li>Passing players will gain 1 point for every pass to a player directly beside them and 2 for every other pass</li>
+            <li>If passing players reach a set number of points (20 recommended) without an interception, the circle should be reduced in size</li>
+            <li>If an interceptor gains possession, they should swap with the last passing player to touch the ball and the count will be restarted</li><br>
+      	</ul>
+       	<p><strong>Rules:</strong></p>
+        <ul>
+        	<li>All passes must be below chest height</li>
+            <li>If a pass is played over chest height, the player who played it must choose an interceptor to swap with</li>
+            <li>Players should attempt to gain the correct balance of passers and interceptors, 4:1 being a recommended ratio</li>
+       	</ul>
+        <br>
+    	<a href="#" data-role="button" onClick="randomFoot(); return false;" class="ui-shadow" data-transition="slide">Re-generate</a>
+    </div> <!-- end of content -->
+	<div data-role="footer" data-position="fixed" class="footer">
+    	<a onclick="takePicture();" data-role="none"><img src="img/geekchamp-icons/cameraButton.png" width="58" height="58"></a>
+		<a href="#home" data-role="none" data-transition="slide"><img src="img/geekchamp-icons/homeButton.png" width="58" height="58"></a>
+        <a href="#" data-role="none" onclick="goBack()" data-transition="slide"><img src="img/geekchamp-icons/backButton.png" width="58" height="58"></a>
+	</div>
+</div> <!-- end of foot4 page -->
+
+
+<!-- Start of foot5 page -->
+<div data-role="page" id="foot5">
+	<div class="header">
+		<div class="logo"></div>
+        <div class="orangeBreak"></div>
+	</div> <!-- end of header -->
+	<div data-role="content" class="transparent">
+    <h2>Football Tennis</h2>
+    	<div class="example"><img src="img/foot5IMG.png"></div>
+		<p>Players Required &nbsp;-&nbsp; 4+ (even numbers ideal)<br>2 teams of equal numbers.<br><br></p>
+        <p><strong>Set-Up and Objectives:</strong></p>
+        <ul>
+        	<li>A tennis court type setting should be assembled, with a divider (ideally a net) and boundaries</li>
+            <li>Teams should position themselves either side of the divider</li>
+            <li>The rules are similar to that of a tennis match where players attempt to pass the ball over the divider, within the boundaries on the other side</li>
+            <li>If the ball bounces more than once on the other side, the team that kicked it will receive a point</li>
+            <li>If the ball bounces outside of the boundaries, the receiving team will receive a point</li>
+            <li>If the ball hits the net the receiving team will receive a point</li>
+            <li>An objective number of points should be set before the beginning of the game, with the team that reaches this number first winning the game</li><br>
+      	</ul>
+       	<p><strong>Rules:</strong></p>
+        <ul>
+        	<li>Players may use any part of their body other than their hands to control/pass the ball</li>
+            <li>Players on the same team may pass the ball between one another, as long as the ball only bounces a maximum of once before being returned over the divider</li>
+            <li>Individual players may take as many touches as they like, as long as the ball does not bounce in between these touches</li>
+            <li>The amount of bounces allowed can be increased for those of a younger age or lower ability</li>
+       	</ul>
+        <br>
+    	<a href="#" data-role="button" onClick="randomFoot(); return false;" class="ui-shadow" data-transition="slide">Re-generate</a>
+    </div> <!-- end of content -->
+	<div data-role="footer" data-position="fixed" class="footer">
+    	<a onclick="takePicture();" data-role="none"><img src="img/geekchamp-icons/cameraButton.png" width="58" height="58"></a>
+		<a href="#home" data-role="none" data-transition="slide"><img src="img/geekchamp-icons/homeButton.png" width="58" height="58"></a>
+        <a href="#" data-role="none" onclick="goBack()" data-transition="slide"><img src="img/geekchamp-icons/backButton.png" width="58" height="58"></a>
+	</div>
+</div> <!-- end of foot5 page -->
+
+
+
+<!----------- Start of basketball activity pages ----------->
+
+<!-- Start of bask1 page -->
+<div data-role="page" id="bask1">
+	<div class="header">
+		<div class="logo"></div>
+        <div class="orangeBreak"></div>
+	</div> <!-- end of header -->
+	<div data-role="content" class="transparent">
+    <h2>H-O-R-S-E</h2>
+	<p>Players Required &nbsp;-&nbsp; 2+<br>All players play against one another.<br><br></p>
+        <p><strong>Set-Up and Objectives:</strong></p>
+        <ul>
+        	<li>Players must decide upon an order in which to shoot the ball</li>
+            <li>The first player should attempt to make a shot from anywhere on the court using any style they wish (2 attempts)</li>
+            <li>If the shot is made, the other players will have three attempts each to replicate the shot (same place, same style)</li>
+            <li>If a player misses all three attempts at replicating a shot they will receive a letter (H-O-R-S-E)</li>
+            <li>If the first player misses both their attempts at setting a shot for the others to copy, the next player will attempt to 'set a shot'</li>
+            <li>Players who fail to 'set a shot' when it is their turn to do so, will also receive a letter</li>
+            <li>Players who receive all letters to spell the word HORSE are eliminated, last man standing wins!</li><br>
+      	</ul>
+       	<p><strong>Rules:</strong></p>
+        <ul>
+        	<li>Individual players may not set the exact same shot more than once</li>
+            <li>A player who successfully 'sets a shot' will continue to do so until they fail (or pass this responsibility on to another player)</li>
+            <li>Players may only use their hands to shoot the ball, but can do such things as stand on one leg, lie down or face backwards</li>
+            <li>Although H-O-R-S-E is the generic name for this game, any word may be used</li>
+       	</ul>
+        <br>
+    	<a href="#" data-role="button" onClick="randomBask(); return false;" class="ui-shadow" data-transition="slide">Re-generate</a>
+    </div> <!-- end of content -->
+	<div data-role="footer" data-position="fixed" class="footer">
+    	<a onclick="takePicture();" data-role="none"><img src="img/geekchamp-icons/cameraButton.png" width="58" height="58"></a>
+		<a href="#home" data-role="none" data-transition="slide"><img src="img/geekchamp-icons/homeButton.png" width="58" height="58"></a>
+        <a href="#" data-role="none" onclick="goBack()" data-transition="slide"><img src="img/geekchamp-icons/backButton.png" width="58" height="58"></a>
+	</div>
+</div> <!-- end of bask1 page -->
+
+
+<!-- Start of bask2 page -->
+<div data-role="page" id="bask2">
+	<div class="header">
+		<div class="logo"></div>
+        <div class="orangeBreak"></div>
+	</div> <!-- end of header -->
+	<div data-role="content" class="transparent">
+    <h2>Killer</h2>
+	<p>Players Required &nbsp;-&nbsp; 3+<br>All players play against one another.<br>Requires 2 basketballs.<br><br></p>
+        <p><strong>Set-Up and Objectives:</strong></p>
+        <ul>
+        	<li>Players should form a line behind the 3-point arc (or a similar distance if not on a generic court)</li>
+            <li>The first player in the line should attempt a shot at the basket, at which point the second player may begin shooting</li>
+            <li>Both players should continue shooting until they make a basket</li>
+            <li>If the first player scores before the second, they should pass their ball to the next player in the queue who may then begin shooting</li>
+            <li>If at any point the player who started shooting the latter of the two shooters scores first, the other player will be eliminated and play will restart</li>
+            <li>If there are only two players left, the first player should return to the 3-point arc after scoring, before shooting again</li>
+            <li>Players continue until the last player is eliminated, revealing a winner</li><br>
+      	</ul>
+       	<p><strong>Rules:</strong></p>
+        <ul>
+        	<li>A players first shot should always be from behind the 3-point line</li>
+            <li>All shots thereafter should be from the spot the ball is retrieved</li>
+            <li>Only minor dribbling is permitted and no traveling or double-dribbling</li>
+            <li>Players may not intentionally interfere with one another, but accidental clashes of shots will invariably happen</li>
+       	</ul>
+        <br>
+    	<a href="#" data-role="button" onClick="randomBask(); return false;" class="ui-shadow" data-transition="slide">Re-generate</a>
+    </div> <!-- end of content -->
+	<div data-role="footer" data-position="fixed" class="footer">
+		<a onclick="takePicture();" data-role="none"><img src="img/geekchamp-icons/cameraButton.png" width="58" height="58"></a>
+        <a href="#home" data-role="none" data-transition="slide"><img src="img/geekchamp-icons/homeButton.png" width="58" height="58"></a>
+        <a href="#" data-role="none" onclick="goBack()" data-transition="slide"><img src="img/geekchamp-icons/backButton.png" width="58" height="58"></a>
+	</div>
+</div> <!-- end of bask2 page -->
+
+
+<!-- Start of bask3 page -->
+<div data-role="page" id="bask3">
+	<div class="header">
+		<div class="logo"></div>
+        <div class="orangeBreak"></div>
+	</div> <!-- end of header -->
+	<div data-role="content" class="transparent">
+    <h2>Spot-up Shooting from the Arc</h2>
+    <div class="example"><img src="img/bask3IMG.png"></div>
+	<p>Players Required &nbsp;-&nbsp; 3+<br>1 shooter, 1 passer and 1 rebounder (all players work together and switch).<br>Numerous basketballs would be useful.<br><br></p>
+        <p><strong>Set-Up and Objectives:</strong></p>
+        <ul>
+        	<li>Players postion themselves as shown above</li>
+            <li>The player straight on behind the arc (red) is the shooter, the one to the side (blue) is the passer and the one beneath the basket the rebounder</li>
+            <li>The passer should pass a ball to the 'spot-up' shooter who shoots at the basket</li>
+            <li>The rebounder will catch the ball and pass it back to the passer to begin again</li>
+            <li>More than one ball would allow this to happen at a quicker pace</li>
+            <li>If there is more than one shooter they can either form a line, or 'spot-up' at different positions along the 3-point line</li>
+            <li>This drill should get players more accustomed to the catch and shoot motion of a spot-up shooter</li><br>
+      	</ul>
+       	<p><strong>Rules:</strong></p>
+        <ul>
+        	<li>Shooters should catch and shoot the ball instantaneously</li>
+            <li>Players should switch places after a decided number of shots</li>
+            <li>A defender can be incorporated to 'hassle' the shooter and a second rebounder to contest for rebounds</li>
+       	</ul>
+        <br>
+    	<a href="#" data-role="button" onClick="randomBask(); return false;" class="ui-shadow" data-transition="slide">Re-generate</a>
+    </div> <!-- end of content -->
+	<div data-role="footer" data-position="fixed" class="footer">
+    	<a onclick="takePicture();" data-role="none"><img src="img/geekchamp-icons/cameraButton.png" width="58" height="58"></a>
+		<a href="#home" data-role="none" data-transition="slide"><img src="img/geekchamp-icons/homeButton.png" width="58" height="58"></a>
+        <a href="#" data-role="none" onclick="goBack()" data-transition="slide"><img src="img/geekchamp-icons/backButton.png" width="58" height="58"></a>
+	</div>
+</div> <!-- end of bask3 page -->
+
+
+<!-- Start of bask4 page -->
+<div data-role="page" id="bask4">
+	<div class="header">
+		<div class="logo"></div>
+        <div class="orangeBreak"></div>
+	</div> <!-- end of header -->
+	<div data-role="content" class="transparent">
+    <h2>Passing Race</h2>
+    <div class="example"><img src="img/bask4IMG.png"></div>
+	<p>Players Required &nbsp;-&nbsp; 9+ (a number divisible by 3 is ideal)<br>3 teams evenly split.<br>Requires 3 basketballs.<br><br></p>
+        <p><strong>Set-Up and Objectives:</strong></p>
+        <ul>
+        	<li>A start line and an end line should be established, roughly the length of a basketball court</li>
+            <li>Players should position themselves at one end of court, with their backs turned to the opposite end</li>
+            <li>The distance between players should be close enough that they can receive a pass from the member in front</li>
+            <li>This is a race so on a specific mark, the first player in the line should pass the ball over their head to the person behind</li>
+            <li>This player should then run to the back of the line as shown, whilst the second player passes the ball through their legs to the third member</li>
+            <li>The players will continue to alternate passes under and over, whilst running to the back of the queue</li>
+            <li>The first team to get all members across the end line wins!</li><br>
+      	</ul>
+       	<p><strong>Rules:</strong></p>
+        <ul>
+        	<li>If the ball hits the floor, the team must restart from the start line</li>
+       	</ul>
+        <br>
+    	<a href="#" data-role="button" onClick="randomBask(); return false;" class="ui-shadow" data-transition="slide">Re-generate</a>
+    </div> <!-- end of content -->
+	<div data-role="footer" data-position="fixed" class="footer">
+    	<a onclick="takePicture();" data-role="none"><img src="img/geekchamp-icons/cameraButton.png" width="58" height="58"></a>
+		<a href="#home" data-role="none" data-transition="slide"><img src="img/geekchamp-icons/homeButton.png" width="58" height="58"></a>
+        <a href="#" data-role="none" onclick="goBack()" data-transition="slide"><img src="img/geekchamp-icons/backButton.png" width="58" height="58"></a>
+	</div>
+</div> <!-- end of bask4 page -->
+
+
+<!-- Start of bask5 page -->
+<div data-role="page" id="bask5">
+	<div class="header">
+		<div class="logo"></div>
+        <div class="orangeBreak"></div>
+	</div> <!-- end of header -->
+	<div data-role="content" class="transparent">
+    <h2>Steal the Dribble</h2>
+    <div class="example"><img src="img/bask5IMG.png"></div>
+	<p>Players Required &nbsp;-&nbsp; 5+<br>1 stealer (dependent on number of players), others are dribblers.<br>Requires numerous basketballs.<br><br></p>
+        <p><strong>Set-Up and Objectives:</strong></p>
+        <ul>
+        	<li>A start line and an end line should be established, roughly the width of a basketball court</li>
+            <li>All dribblers should position themselves behind the start line with a ball, as shown</li>
+            <li>The stealer(s) should be positioned in-between the start and end lines without a ball</li>
+            <li>On a specific mark, dribblers should attempt to dribble from the start to the end line</li>
+            <li>The objective of the stealer(s) is to steal as many balls from the dribblers as possible</li>
+            <li>Any dribblers who get their ball stolen will also become a stealer for the next round</li>
+            <li>The last dribbler standing wins!</li><br>
+      	</ul>
+       	<p><strong>Rules:</strong></p>
+        <ul>
+        	<li>No traveling or double-dribbling is permitted</li>
+            <li>Dribblers should attempt to use both hands</li>
+            <li>Stealers should not foul intentionally when trying to get the balls</li>
+            <li>Ideally the game should begin with 1 stealer for every 4 dribblers</li>
+       	</ul>
+        <br>
+    	<a href="#" data-role="button" onClick="randomBask(); return false;" class="ui-shadow" data-transition="slide">Re-generate</a>
+    </div> <!-- end of content -->
+	<div data-role="footer" data-position="fixed" class="footer">
+    	<a onclick="takePicture();" data-role="none"><img src="img/geekchamp-icons/cameraButton.png" width="58" height="58"></a>
+		<a href="#home" data-role="none" data-transition="slide"><img src="img/geekchamp-icons/homeButton.png" width="58" height="58"></a>
+        <a href="#" data-role="none" onclick="goBack()" data-transition="slide"><img src="img/geekchamp-icons/backButton.png" width="58" height="58"></a>
+	</div>
+</div> <!-- end of bask5 page -->
+
+
+
+<!----------- Start of american football activity pages ----------->
+
+<!-- Start of af1 page -->
+<div data-role="page" id="af1">
+	<div class="header">
+		<div class="logo"></div>
+		<div class="orangeBreak"></div>
+	</div> <!-- end of header -->
+	<div data-role="content" class="transparent">
+	<h2>Precise Throwing</h2>
+	<div class="example"><img src="img/af1IMG.png"></div>
+	<p>Players Required &nbsp;-&nbsp; 1+<br>Training drill for Quarterbacks.<br>Numerous footballs and a target needed.<br><br></p>
+		<p><strong>Set-Up and Objectives:</strong></p>
+		<ul>
+			<li>A target with a reasonably sized hole (tire, hula hoop, etc.) should be hung roughly 10 feet from the ground</li>
+			<li>The player(s) should position themselves at a reasonable distance from the target</li>
+			<li>The player should attempt to throw footballs through the target</li>
+			<li>For every five successful attempts in a row the player should move 5 feet further from the target</li>
+			<li>This should be continued until this feat is deemed unachievable</li>
+			<li>This drill should dramatically improve passing accuracy over time</li><br>
+		</ul>
+		<p><strong>Rules:</strong></p>
+		<ul>
+			<li>To increase difficulty the player can also position themselves at a variety of angles from the target</li>
+			<li>To increase the difficulty further, another player/coach could move the target slowly</li>
+		</ul>
+		<br>
+		<a href="#" data-role="button" onClick="randomAf(); return false;" class="ui-shadow" data-transition="slide">Re-generate</a>
+	</div> <!-- end of content -->
+	<div data-role="footer" data-position="fixed" class="footer">
+    	<a onclick="takePicture();" data-role="none"><img src="img/geekchamp-icons/cameraButton.png" width="58" height="58"></a>
+		<a href="#home" data-role="none" data-transition="slide"><img src="img/geekchamp-icons/homeButton.png" width="58" height="58"></a>
+        <a href="#" data-role="none" onclick="goBack()" data-transition="slide"><img src="img/geekchamp-icons/backButton.png" width="58" height="58"></a>
+	</div>
+</div> <!-- end of af1 page -->
+
+
+<!-- Start of af2 page -->
+<div data-role="page" id="af2">
+	<div class="header">
+		<div class="logo"></div>
+		<div class="orangeBreak"></div>
+	</div> <!-- end of header -->
+	<div data-role="content" class="transparent">
+	<h2>Tipped Catch</h2>
+	<p>Players Required &nbsp;-&nbsp; 2+<br>1 throwing, others catching.<br>Training drill for Receivers and Defensive Backs.<br><br></p>
+		<p><strong>Set-Up and Objectives:</strong></p>
+		<ul>
+			<li>Drill designed to help with catching tipped or inaccurate passes</li>
+			<li>The two players should line up facing one another approx. 15-20 yards apart</li>
+			<li>The player catching should begin running towards the thrower</li>
+			<li>At this point, the player throwing should release the ball intentionally high of the receiving player</li>
+			<li>The receiving player should attempt to tip the ball into the air and make the catch however possible</li>
+			<li>This drill should improve the awareness of Receivers and Defensive Backs to tipped or deflected passes</li><br>
+		</ul>
+		<p><strong>Rules:</strong></p>
+		<ul>
+			<li>The player throwing should attempt to place the ball too high to be caught first time, as this defeats the object of the drill</li>
+			<li>Receivers may use any means necessary to complete the catch</li>
+            <li>Ball should be thrown intentionally wide of the target on occasions if too easy</li>
+		</ul>
+		<br>
+		<a href="#" data-role="button" onClick="randomAf(); return false;" class="ui-shadow" data-transition="slide">Re-generate</a>
+	</div> <!-- end of content -->
+	<div data-role="footer" data-position="fixed" class="footer">
+    	<a onclick="takePicture();" data-role="none"><img src="img/geekchamp-icons/cameraButton.png" width="58" height="58"></a>
+		<a href="#home" data-role="none" data-transition="slide"><img src="img/geekchamp-icons/homeButton.png" width="58" height="58"></a>
+        <a href="#" data-role="none" onclick="goBack()" data-transition="slide"><img src="img/geekchamp-icons/backButton.png" width="58" height="58"></a>
+	</div>
+</div> <!-- end of af2 page -->
+
+
+<!-- Start of af3 page -->
+<div data-role="page" id="af3">
+	<div class="header">
+		<div class="logo"></div>
+		<div class="orangeBreak"></div>
+	</div> <!-- end of header -->
+	<div data-role="content" class="transparent">
+	<h2>Changing Direction at Speed</h2>
+    <div class="example"><img src="img/af3IMG.png"></div>
+	<p>Players Required &nbsp;-&nbsp; 1+<br>Training drill for Running Backs.<br>4 markers required (cones, flags, tires, etc.).<br><br></p>
+		<p><strong>Set-Up and Objectives:</strong></p>
+		<ul>
+			<li>4 corners of a rectangle/square should be marked out, as shown</li>
+			<li>The player(s) should start by one of the markers and run the route provided</li>
+			<li>As the player(s) approach each marker they should drop the hand closest to it to get around it</li>
+			<li>Players should start slowly and gradually increase the speed as they get accustomed to the movements required</li>
+			<li>This drill will help to improve balance and quickness when running through traffic</li><br>
+		</ul>
+		<p><strong>Rules:</strong></p>
+		<ul>
+			<li>The ball should always be placed in the arm away from the marker</li>
+			<li>If more than one player, the next player should begin when the one before finishes</li>
+            <li>Player(s) should attempt to keep their body as close to the markers as possible as they go around them</li>
+		</ul>
+		<br>
+		<a href="#" data-role="button" onClick="randomAf(); return false;" class="ui-shadow" data-transition="slide">Re-generate</a>
+	</div> <!-- end of content -->
+	<div data-role="footer" data-position="fixed" class="footer">
+    	<a onclick="takePicture();" data-role="none"><img src="img/geekchamp-icons/cameraButton.png" width="58" height="58"></a>
+		<a href="#home" data-role="none" data-transition="slide"><img src="img/geekchamp-icons/homeButton.png" width="58" height="58"></a>
+        <a href="#" data-role="none" onclick="goBack()" data-transition="slide"><img src="img/geekchamp-icons/backButton.png" width="58" height="58"></a>
+	</div>
+</div> <!-- end of af3 page -->
+
+
+<!-- Start of af4 page -->
+<div data-role="page" id="af4">
+	<div class="header">
+		<div class="logo"></div>
+		<div class="orangeBreak"></div>
+	</div> <!-- end of header -->
+	<div data-role="content" class="transparent">
+	<h2>Reaction Footwork</h2>
+    <div class="example"><img src="img/af4IMG.png"></div>
+	<p>Players Required &nbsp;-&nbsp; 2+<br>Training drill for Quarterbacks.<br>1 Quarterback, other is the caller.<br><br></p>
+		<p><strong>Set-Up and Objectives:</strong></p>
+		<ul>
+			<li>3 'pockets' should be set up as shown, no more than 4 feet wide</li>
+			<li>Both the Quarterback and the caller/coach should assign numbers to each pocket before starting</li>
+			<li>The Quarterback (blue) should position themself as shown, with the coach (red) standing so they can be seen</li>
+			<li>The Quarterback will pretend to take a snap and drop back behind the pockets</li>
+			<li>The coach will precede to hold up either one, two or three fingers to represent a respective pocket</li>
+			<li>The Quarterback should react to these hand signals and move up as they would do into the pocket, then drop back</li>
+            <li>This should be continued for a number of minutes, then Quarterbacks should switch</li>
+            <li>This should improve footwork in and around the pocket and also reactions within a game situation</li><br>
+		</ul>
+		<p><strong>Rules:</strong></p>
+		<ul>
+			<li>The Quarterback should always have their head up</li>
+			<li>If no signal is given the Quarterback should continue to move sidewards behind the pockets</li>
+            <li>No words should be spoken, everything is visual</li>
+            <li>Difficulty can be increased by adding extra pockets</li>
+		</ul>
+		<br>
+		<a href="#" data-role="button" onClick="randomAf(); return false;" class="ui-shadow" data-transition="slide">Re-generate</a>
+	</div> <!-- end of content -->
+	<div data-role="footer" data-position="fixed" class="footer">
+    	<a onclick="takePicture();" data-role="none"><img src="img/geekchamp-icons/cameraButton.png" width="58" height="58"></a>
+		<a href="#home" data-role="none" data-transition="slide"><img src="img/geekchamp-icons/homeButton.png" width="58" height="58"></a>
+        <a href="#" data-role="none" onclick="goBack()" data-transition="slide"><img src="img/geekchamp-icons/backButton.png" width="58" height="58"></a>
+	</div>
+</div> <!-- end of af4 page -->
+
+
+<!-- Start of af5 page -->
+<div data-role="page" id="af5">
+	<div class="header">
+		<div class="logo"></div>
+		<div class="orangeBreak"></div>
+	</div> <!-- end of header -->
+	<div data-role="content" class="transparent">
+	<h2>Distraction Drill</h2>
+	<p>Players Required &nbsp;-&nbsp; 4+<br>1 Quarterback, 1 Receiver (dependent on number of players), 2 defenders.<br>Training drill for Receivers.<br><br></p>
+		<p><strong>Set-Up and Objectives:</strong></p>
+		<ul>
+			<li>The Quarterback and Receiver(s) should stand facing each other approx. 15-20 yards apart</li>
+			<li>The defenders should position themselves in between the two with their hands in the air</li>
+			<li>The Quarterback should attempt to the throw the ball between the arms of the defenders to the Receiver(s)</li>
+			<li>The Receiver(s) must attempt to catch the ball, avoiding the distraction of the defenders</li>
+			<li>This drill will help to improve the catching of your Receiver(s) in traffic and also their concentration</li><br>
+		</ul>
+		<p><strong>Rules:</strong></p>
+		<ul>
+			<li>The Quarterback should attempt to deliver the ball at different angles and trajectories</li>
+			<li>The defenders should move their arms to help distract the Receiver(s)</li>
+            <li>To increase the difficulty add more defenders, or have the Receiver(s) turn their back before the ball is thrown</li>
+		</ul>
+		<br>
+		<a href="#" data-role="button" onClick="randomAf(); return false;" class="ui-shadow" data-transition="slide">Re-generate</a>
+	</div> <!-- end of content -->
+	<div data-role="footer" data-position="fixed" class="footer">
+		<a onclick="takePicture();" data-role="none"><img src="img/geekchamp-icons/cameraButton.png" width="58" height="58"></a>
+        <a href="#home" data-role="none" data-transition="slide"><img src="img/geekchamp-icons/homeButton.png" width="58" height="58"></a>
+        <a href="#" data-role="none" onclick="goBack()" data-transition="slide"><img src="img/geekchamp-icons/backButton.png" width="58" height="58"></a>
+	</div>
+</div> <!-- end of af5 page -->
+
+
+
+<!----------- Start of rugby activity pages ----------->
+
+<!-- Start of rugby1 page -->
+<div data-role="page" id="rugby1">
+	<div class="header">
+		<div class="logo"></div>
+		<div class="orangeBreak"></div>
+	</div> <!-- end of header -->
+	<div data-role="content" class="transparent">
+	<h2>Pass Reaction</h2>
+    <div class="example"><img src="img/rugby1IMG.png"></div>
+	<p>Players Required &nbsp;-&nbsp; 4+<br>3 feeders, 1 central focus.<br>At least 2 balls needed.<br><br></p>
+		<p><strong>Set-Up and Objectives:</strong></p>
+		<ul>
+			<li>3 players should position themsleves in a row with roughly 3 metres between each, as shown</li>
+			<li>2 of these should have a ball and the other should not</li>
+			<li>The fouth player (the central focus) should stand approx. 5 metres from these, as shown</li>
+			<li>This player also does not have a ball</li>
+			<li>One of the two players with a ball should pass to the central focus on the other side, who will pass on to the player without a ball</li>
+			<li>As the central focus releases this pass, the other player who started with a ball should pass to him</li>
+            <li>The drill continues like this until players are ready to switch</li>
+            <li>This drill should help to improve reaction times and pass handling</li><br>
+		</ul>
+		<p><strong>Rules:</strong></p>
+		<ul>
+			<li>To increase difficulty the central focus could move laterally or vertically whilst receiving the passes</li>
+			<li>All passes should aim to be on target</li>
+            <li>More players can be added to further increase the difficulty</li>
+		</ul>
+		<br>
+		<a href="#" data-role="button" onClick="randomRugby(); return false;" class="ui-shadow" data-transition="slide">Re-generate</a>
+	</div> <!-- end of content -->
+	<div data-role="footer" data-position="fixed" class="footer">
+    	<a onclick="takePicture();" data-role="none"><img src="img/geekchamp-icons/cameraButton.png" width="58" height="58"></a>
+		<a href="#home" data-role="none" data-transition="slide"><img src="img/geekchamp-icons/homeButton.png" width="58" height="58"></a>
+        <a href="#" data-role="none" onclick="goBack()" data-transition="slide"><img src="img/geekchamp-icons/backButton.png" width="58" height="58"></a>
+	</div>
+</div> <!-- end of rugby1 page -->
+
+
+<!-- Start of rugby2 page -->
+<div data-role="page" id="rugby2">
+	<div class="header">
+		<div class="logo"></div>
+		<div class="orangeBreak"></div>
+	</div> <!-- end of header -->
+	<div data-role="content" class="transparent">
+	<h2>Passing Under Pressure</h2>
+    <div class="example"><img src="img/rugby2IMG.png"></div>
+	<p>Players Required &nbsp;-&nbsp; 12+ recommended.<br>2 teams evenly split (1 attack, 1 defence).<br><br></p>
+		<p><strong>Set-Up and Objectives:</strong></p>
+		<ul>
+			<li>The attacking team (red) should line up staggered, whilst the defence (blue) should line up opposite, as shown</li>
+			<li>The attackers should attempt to quickly pass the ball along the line</li>
+			<li>The defence should move towards the attackers and 'pressure' them without tackling</li>
+			<li>Once the attackers reach the end of the line the drill is over and should be restarted</li>
+			<li>Attackers should attempt to go as quickly as possible without making mistakes</li>
+            <li>When the drill has been ran several times, the teams should switch roles</li>
+			<li>This drill will improve the teams passing in pressure situations</li><br>
+		</ul>
+		<p><strong>Rules:</strong></p>
+		<ul>
+			<li>To increase difficulty, the attackers can be moved back slightly and run onto the passes</li>
+			<li>Attackers should be timed to allow teams to compete against one another</li>
+		</ul>
+		<br>
+		<a href="#" data-role="button" onClick="randomRugby(); return false;" class="ui-shadow" data-transition="slide">Re-generate</a>
+	</div> <!-- end of content -->
+	<div data-role="footer" data-position="fixed" class="footer">
+    	<a onclick="takePicture();" data-role="none"><img src="img/geekchamp-icons/cameraButton.png" width="58" height="58"></a>
+		<a href="#home" data-role="none" data-transition="slide"><img src="img/geekchamp-icons/homeButton.png" width="58" height="58"></a>
+        <a href="#" data-role="none" onclick="goBack()" data-transition="slide"><img src="img/geekchamp-icons/backButton.png" width="58" height="58"></a>
+	</div>
+</div> <!-- end of rugby2 page -->
+
+
+<!-- Start of rugby3 page -->
+<div data-role="page" id="rugby3">
+	<div class="header">
+		<div class="logo"></div>
+		<div class="orangeBreak"></div>
+	</div> <!-- end of header -->
+	<div data-role="content" class="transparent">
+	<h2>4-way Lineout Practice</h2>
+    <div class="example"><img src="img/rugby3IMG.png"></div>
+	<p>Players Required &nbsp;-&nbsp; 12<br>4 teams (each with 1 jumper and 2 lifters).<br><br></p>
+		<p><strong>Set-Up and Objectives:</strong></p>
+		<ul>
+			<li>4 teams should be set up in a square as shown</li>
+			<li>Each team has 2 lifters (yellow) and 1 jumper (blue)</li>
+			<li>One jumper has the ball to begin and is lifted into the air</li>
+			<li>The second jumper will then rise and receive a pass from the jumper with the ball</li>
+			<li>This should be continued around the square for a number of repetitions</li>
+			<li>This drill should dramatically improve lineout technique</li><br>
+		</ul>
+		<p><strong>Rules:</strong></p>
+		<ul>
+			<li>Coaches should look for proper technique from both lifters and jumpers</li>
+			<li>To increase the difficulty for those of higher ability, two balls could be introduced</li>
+            <li>Teams should be set up at a fair distance from one another</li>
+            <li>As a variation the coach (red) may stand in the middle of the square and act as a scrum-half, receiving the ball from each jumper and passing it to the next</li>
+		</ul>
+		<br>
+		<a href="#" data-role="button" onClick="randomRugby(); return false;" class="ui-shadow" data-transition="slide">Re-generate</a>
+	</div> <!-- end of content -->
+	<div data-role="footer" data-position="fixed" class="footer">
+    	<a onclick="takePicture();" data-role="none"><img src="img/geekchamp-icons/cameraButton.png" width="58" height="58"></a>
+		<a href="#home" data-role="none" data-transition="slide"><img src="img/geekchamp-icons/homeButton.png" width="58" height="58"></a>
+        <a href="#" data-role="none" onclick="goBack()" data-transition="slide"><img src="img/geekchamp-icons/backButton.png" width="58" height="58"></a>
+	</div>
+</div> <!-- end of rugby3 page -->
+
+
+<!-- Start of rugby4 page -->
+<div data-role="page" id="rugby4">
+	<div class="header">
+		<div class="logo"></div>
+		<div class="orangeBreak"></div>
+	</div> <!-- end of header -->
+	<div data-role="content" class="transparent">
+	<h2>Kicking Accuracy Game</h2>
+    <div class="example"><img src="img/rugby4IMG.png"></div>
+	<p>Players Required &nbsp;-&nbsp; 5+<br>4 kickers, 1 interceptor.<br><br></p>
+		<p><strong>Set-Up and Objectives:</strong></p>
+		<ul>
+			<li>A square approx. 25 yards in height and width should be set up, as shown</li>
+			<li>Kickers (red) should position themselves at each corner of the square, one of which has a ball</li>
+			<li>The interceptor(s) (blue) should position themselves in the middle of the square</li>
+			<li>The kickers should work specifically on their Grubber and Drop kicks, passing to one another around the square</li>
+			<li>The interceptor(s) should attempt to catch the ball whilst they do this</li>
+			<li>Once an interceptor catches the ball they should switch places with the player who kicked it</li><br>
+		</ul>
+		<p><strong>Rules:</strong></p>
+		<ul>
+			<li>The ball should not leave the square, if it does the player who kicked it should switch with the interceptor</li>
+            <li>No set direction, kicks can go to and from any player</li>
+			<li>To increase the difficulty, increase the size of the square or add more interceptors</li>
+            <li>Coaches should look for good kicking technique</li>
+		</ul>
+		<br>
+		<a href="#" data-role="button" onClick="randomRugby(); return false;" class="ui-shadow" data-transition="slide">Re-generate</a>
+	</div> <!-- end of content -->
+	<div data-role="footer" data-position="fixed" class="footer">
+    	<a onclick="takePicture();" data-role="none"><img src="img/geekchamp-icons/cameraButton.png" width="58" height="58"></a>
+    	<a href="#home" data-role="none" data-transition="slide"><img src="img/geekchamp-icons/homeButton.png" width="58" height="58"></a>
+        <a href="#" data-role="none" onclick="goBack()" data-transition="slide"><img src="img/geekchamp-icons/backButton.png" width="58" height="58"></a>
+	</div>
+</div> <!-- end of rugby4 page -->
+
+
+<!-- Start of rugby5 page -->
+<div data-role="page" id="rugby5">
+	<div class="header">
+		<div class="logo"></div>
+		<div class="orangeBreak"></div>
+	</div> <!-- end of header -->
+	<div data-role="content" class="transparent">
+	<h2>Ball Retention</h2>
+    <div class="example"><img src="img/rugby5IMG.png"></div>
+	<p>Players Required &nbsp;-&nbsp; 2+<br>Even numbers required (2 per group, 1 attacker and 1 defender).<br>1 ball needed per pair.<br><br></p>
+		<p><strong>Set-Up and Objectives:</strong></p>
+		<ul>
+			<li>Attackers (yellow) and defenders (blue) should line up facing each other, as shown</li>
+			<li>Attackers will each have a ball in their hands</li>
+			<li>Both players should approach one another and meet in the middle</li>
+			<li>The attacker should turn back towards the way they came from (representing their own team) and attempt to stay facing this way</li>
+			<li>The objective of the defender is to turn the attacker, making him face the direction they came from (away from support)</li>
+			<li>This drill will work on both ball retention of attackers and defenders ability to stop this retention</li><br>
+		</ul>
+		<p><strong>Rules:</strong></p>
+		<ul>
+			<li>Both players should attempt to stay on their feet at all times</li>
+			<li>Coaches should look for attacking players to keep their body between the defender and the ball</li>
+		</ul>
+		<br>
+		<a href="#" data-role="button" onClick="randomRugby(); return false;" class="ui-shadow" data-transition="slide">Re-generate</a>
+	</div> <!-- end of content -->
+	<div data-role="footer" data-position="fixed" class="footer">
+    	<a onclick="takePicture();" data-role="none"><img src="img/geekchamp-icons/cameraButton.png" width="58" height="58"></a>
+		<a href="#home" data-role="none" data-transition="slide"><img src="img/geekchamp-icons/homeButton.png" width="58" height="58"></a>
+        <a href="#" data-role="none" onclick="goBack()" data-transition="slide"><img src="img/geekchamp-icons/backButton.png" width="58" height="58"></a>
+	</div>
+</div> <!-- end of rugby5 page -->
+
+</body>
+ 
+<!-- JavaScript -->
+<script src="js/various.js" type="text/javascript"></script>
+
+</html>
+

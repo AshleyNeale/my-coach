@@ -1,0 +1,183 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* General styling rules */
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 62.5%;
+}
+
+#home, #football, #basketball, #af, #rugby, #foot1, #foot2, #foot3, #foot4, #foot5, #bask1, #bask2, #bask3, #bask4, #bask5, #af1, #af2, #af3, #af4, #af5, #rugby1, #rugby2, #rugby3, #rugby4, #rugby5  {
+	background:url(../img/BG.png) repeat;  /* Background image downloaded from http://subtlepatterns.com/ */
+}
+
+h2 {
+	font-size: 2em;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: left;
+	text-shadow: none;
+	letter-spacing: 0.1em;
+	margin: auto;
+	margin-bottom: 20px;
+	padding-bottom: 5px;
+	color: #000;
+	border-bottom: 1px solid #000;
+}
+
+h5 {
+	font-size: 2.2em;
+	font-family: Verdana, Geneva, sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+	margin: auto;
+	padding-bottom: 5px;
+	text-shadow: none;
+	letter-spacing: 0.1em;
+	color: #e94e1b;
+	border-bottom: 1px dashed #e94e1b;	
+}
+
+
+/* Styling for header */
+.header {
+	height: 185;
+	width: 100%;
+	background: #FFF;
+	margin: 0;
+	padding: 0;
+}
+
+.logo {
+	width: auto;
+	height: 168px;
+	background: url(../img/headerLogo.png) top no-repeat;
+	margin: auto;
+	padding: 0;
+}
+
+.orangeBreak {
+	width: 100%;
+	height: 17px;
+	background: #e94e1b;
+	margin: 0;
+	padding: 0;
+}
+
+
+/* Home content styling */
+#home .mainmenu {
+	margin: 5px;
+	padding: 0;
+}
+
+#home .mainmenu li {
+	background: none;
+	border: none;
+}
+
+#home .mainmenu li h3 {
+	font-size: 1.2em;
+}
+
+#home .mainmenu li a {
+	background: rgba(255,255,255,.5);
+	display: block;
+	margin-bottom: 20px;
+	border-radius: 7px;
+}
+
+#home .mainmenu li a:hover {
+	background: rgba(255,255,255,.7);
+}
+
+#home .mainmenu li p {
+	text-shadow: none;
+	color: #666;
+	font-size: 1em;
+}
+
+#home [data-role="content"] h4 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 2.3em;
+	letter-spacing: 0.1em;
+}
+
+
+/* Content main pages */
+#football .transparent, #basketball .transparent, #af .transparent, #rugby .transparent {
+	background: rgba(255,255,255,.5);
+	border-radius: 7px;
+	margin: 20px;
+	padding: 15px;
+}
+
+#football .inside, #basketball .inside, #af .inside, #rugby .inside {
+	background: rgba(255,255,255,.6);
+	border-radius: 7px;
+	margin: 15px 5px 5px 5px;
+	padding: 1px 10px 1px 10px;
+	text-align: center;
+	text-shadow: none;
+	font-size: 1.8em; 
+}
+
+
+/* Content drill pages */
+#foot1 .transparent, #foot2 .transparent, #foot3 .transparent, #foot4 .transparent, #foot5 .transparent, #bask1 .transparent, #bask2 .transparent, #bask3 .transparent, #bask4 .transparent, #bask5 .transparent, #af1 .transparent, #af2 .transparent, #af3 .transparent, #af4 .transparent, #af5 .transparent, #rugby1 .transparent, #rugby2 .transparent, #rugby3 .transparent, #rugby4 .transparent, #rugby5 .transparent {
+	background: rgba(255,255,255,.5);
+	border-radius: 7px;
+	margin: 20px;
+	padding: 15px;
+	font-size: 1.2em;
+}
+
+#foot1 .transparent p, #foot2 .transparent p, #foot3 .transparent p, #foot4 .transparent p, #foot5 .transparent p, #bask1 .transparent p, #bask2 .transparent p, #bask3 .transparent p, #bask4 .transparent p, #bask5 .transparent p, #af1 .transparent p, #af2 .transparent p, #af3 .transparent p, #af4 .transparent p, #af5 .transparent p, #rugby1 .transparent p, #rugby2 .transparent p, #rugby3 .transparent p, #rugby4 .transparent p, #rugby5 .transparent p {
+	text-shadow: none;
+	color: #666;
+	font-size: 1.4em;
+}
+
+#foot1 .transparent li, #foot2 .transparent li, #foot3 .transparent li, #foot4 .transparent li, #foot5 .transparent li, #bask1 .transparent li, #bask2 .transparent li, #bask3 .transparent li, #bask4 .transparent li, #bask5 .transparent li, #af1 .transparent li, #af2 .transparent li, #af3 .transparent li, #af4 .transparent li, #af5 .transparent li, #rugby1 .transparent li, #rugby2 .transparent li, #rugby3 .transparent li, #rugby4 .transparent li, #rugby5 .transparent li {
+	text-shadow: none;
+	color: #666;
+	padding-bottom: 3px;
+	font-size: 1.4em;
+}
+
+.example {
+	text-align: center;
+	margin-bottom: 15px;
+	width: 100%;
+}
+
+
+/* Generate button styling */
+#football .inside a, #basketball .inside a, #af .inside a, #rugby .inside a {
+	padding: 0;
+	font-family: Verdana, Geneva, sans-serif;
+	width: 100%;
+}
+
+/* Re-generate button styling */
+#foot1 .transparent a, #foot2 .transparent a, #foot3 .transparent a, #foot4 .transparent a, #foot5 .transparent a, #bask1 .transparent a, #bask2 .transparent a, #bask3 .transparent a, #bask4 .transparent a, #bask5 .transparent a, #af1 .transparent a, #af2 .transparent a, #af3 .transparent a, #af4 .transparent a, #af5 .transparent a, #rugby1 .transparent a, #rugby2 .transparent a, #rugby3 .transparent a, #rugby4 .transparent a, #rugby5 .transparent a {
+	padding: 0;
+	font-family: Verdana, Geneva, sans-serif;
+	width: 100%;
+}	
+
+
+/* Styling for footer */
+.footer {
+	width: 100%;
+	background: #e94e1b;
+	margin: 0;
+	padding: 0;
+	border: 0; 
+	text-align: center;
+	height: 64px;
+}
+
+.footer a img {
+	margin: 3px 5px 3px 5px;
+}
